@@ -27,5 +27,47 @@ Instale a dependência com:
 
 ```bash
 pip install cryptography
+```
 
 **Este projeto é apenas para fins educacionais. Não deve ser utilizado para atividades maliciosas. O uso de ransomware ou qualquer ferramenta que comprometa a segurança de dados de outras pessoas é ilegal e antiético. **
+
+
+  
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# Simple Ransomware
+
+This repository contains two scripts that simulate a simple ransomware. The `madara.py` script is responsible for encrypting files, while `decrypt.py` decrypts them, restoring the data.
+
+## Script Descriptions
+
+- **madara.py**: This script encrypts all files in the folder where it is executed (except the script itself and the key file). It generates an encryption key and stores it in a file called `chave.key`.
+- **decrypt.py**: This script decrypts the files encrypted using the key generated during encryption. It restores the files to their original state.
+
+## How It Works
+
+1. **madara.py**:
+   - Generates an encryption key using the `cryptography` library.
+   - Encrypts all files in the folder, except for the script itself and the generated key.
+   - Saves the key in the `chave.key` file.
+
+2. **decrypt.py**:
+   - Reads the key stored in the `chave.key` file.
+   - Decrypts all files encrypted by the key.
+
+## Requirements
+
+- Python 3.x
+- `cryptography` library
+
+## Install the dependency with:
+
+```bash
+pip install cryptography
+```
+
+** Disclaimer **
+This project is for educational purposes only. It should not be used for malicious activities. The use of ransomware or any tool that compromises other people's data security is illegal and unethical. 
